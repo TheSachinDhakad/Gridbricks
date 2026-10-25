@@ -174,15 +174,7 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 # Local React development is allowed by default.
 # Add your deployed Vercel frontend URL in Render.
-CORS_ALLOWED_ORIGINS = [
-    origin.strip()
-    for origin in os.environ.get(
-        "CORS_ALLOWED_ORIGINS",
-        "http://localhost:5173,http://127.0.0.1:5173",
-    ).split(",")
-    if origin.strip()
-]
-
+CORS_ALLOW_ALL_ORIGINS = True
 
 # --------------------------------------------------
 # DJANGO REST FRAMEWORK
